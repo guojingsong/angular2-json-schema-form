@@ -6,7 +6,8 @@ import { Component, Input } from '@angular/core';
     <select-widget-widget
       [dataIndex]="dataIndex"
       [layoutIndex]="layoutIndex"
-      [layoutNode]="layoutNode"></select-widget-widget>`,
+      [layoutNode]="layoutNode">
+    </select-widget-widget>`,
 })
 export class NoFrameworkComponent {
   @Input() layoutNode: any;

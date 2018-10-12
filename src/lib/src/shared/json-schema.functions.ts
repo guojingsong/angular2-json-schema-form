@@ -1,12 +1,7 @@
 import * as _ from 'lodash';
 
-import {
-  getType, hasValue, inArray, isArray, isEmpty, isFunction, isNumber, isObject,
-  isString
-} from './validator.functions';
-import {
-  forEach, hasOwn, mergeFilteredObject, uniqueItems, commonItems
-} from './utility.functions';
+import { getType, hasValue, inArray, isArray, isEmpty, isFunction, isNumber, isObject, isString } from './validator.functions';
+import { forEach, hasOwn, mergeFilteredObject, uniqueItems, commonItems } from './utility.functions';
 import { mergeSchemas } from './merge-schemas.function';
 import { JsonPointer, Pointer } from './jsonpointer.functions';
 import { JsonValidators } from './json.validators';
@@ -214,6 +209,17 @@ export function getFromSchema(schema, dataPointer, returnType = 'schema') {
  * just refer to the metadata for their shallow equivalents, instead of having
  * to add additional redundant metadata for each recursively added node.
  *
+ *
+ *  
+ * 检查JSON指针与递归引用和返回的映射
+ * 一个JSON指针，指向同一对象中最浅的等效位置。
+ *
+ * 使用此函数使对象可以无限地构建
+ * 递归，同时维护一组固定的元数据，例如字段数据类型。
+ * 对象可以增长到它想要的大，并且深度递归节点可以
+ * 只参考元数据的浅等价物，而不是拥有
+ * 为每个递归添加的节点添加额外的冗余元数据。
+ * 
  * Example:
  *
  * pointer:         '/stuff/and/more/and/more/and/more/and/more/stuff'

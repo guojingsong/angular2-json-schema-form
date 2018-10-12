@@ -63,7 +63,8 @@ export function copy(object: any, errors = false): any {
  *
  * Iterates over all items in the first level of an object or array
  * and calls an iterator funciton on each item.
- *
+ * 遍历对象或数组的第一级中的所有项并在每个项上调用迭代器函数。
+ * 
  * The iterator function is called with four values:
  * 1. The current item's value
  * 2. The current item's key

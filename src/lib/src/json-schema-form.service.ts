@@ -6,20 +6,11 @@ import { Subject } from 'rxjs/Subject';
 import * as Ajv from 'ajv';
 import * as _ from 'lodash';
 
-import {
-  hasValue, isArray, isDefined, isEmpty, isObject, isString
-} from './shared/validator.functions';
-import {
-  fixTitle, forEach, hasOwn, toTitleCase
-} from './shared/utility.functions';
+import { hasValue, isArray, isDefined, isEmpty, isObject, isString } from './shared/validator.functions';
+import { fixTitle, forEach, hasOwn, toTitleCase } from './shared/utility.functions';
 import { JsonPointer } from './shared/jsonpointer.functions';
-import {
-  buildSchemaFromData, buildSchemaFromLayout, removeRecursiveReferences,
-  resolveSchemaReferences
-} from './shared/json-schema.functions';
-import {
-  buildFormGroup, buildFormGroupTemplate, formatFormData, getControl
-} from './shared/form-group.functions';
+import { buildSchemaFromData, buildSchemaFromLayout, removeRecursiveReferences, resolveSchemaReferences } from './shared/json-schema.functions';
+import { buildFormGroup, buildFormGroupTemplate, formatFormData, getControl} from './shared/form-group.functions';
 import { buildLayout, getLayoutNode } from './shared/layout.functions';
 import { enValidationMessages } from './locale/en-validation-messages';
 import { frValidationMessages } from './locale/fr-validation-messages';
